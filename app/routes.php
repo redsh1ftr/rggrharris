@@ -15,3 +15,12 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::resource('central', 'CentralsController');
+Route::model('central', 'Central');
+
+Route::resource('caskets', 'CasketsController');
+Route::model('caskets', 'Casket');
+
+Route::resource('vaults', 'VaultsController');
+Route::model('vault', 'Vault');
