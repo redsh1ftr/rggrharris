@@ -20,7 +20,8 @@ Route::resource('central', 'CentralsController');
 Route::model('central', 'Central');
 
 Route::resource('caskets', 'CasketsController');
-Route::model('caskets', 'Casket');
+Route::get('/allcasket/{type}', array('as' => 'casketIndex', 'uses' => 'CasketsController@index'));
+Route::model('casket', 'Casket');
 
 Route::resource('vaults', 'VaultsController');
 Route::model('vault', 'Vault');
@@ -28,8 +29,20 @@ Route::model('vault', 'Vault');
 Route::resource('administrator', 'AdminsController');
 Route::model('admin', 'Admin');
 
-Route::resource('vaults', 'VaultsController');
-Route::model('vault', 'Vault');
+Route::resource('lifes_reflection', 'LifesReflectionsController');
+Route::model('lifes_reflection', 'LifesReflection');
 
 Route::resource('flowers', 'FlowersController');
 Route::model('flower', 'Flower');
+
+Route::resource('infos', 'InfosController');
+Route::model('info', 'Info');
+
+Route::resource('caskettypes', 'CasketTypesController');
+Route::model('casket_types', 'CasketType');
+
+Route::resource('casketsubtypes', 'CasketSubTypesController');
+Route::model('casket_subtypes', 'CasketSubType');
+
+Route::resource('caskettypesindex', 'CasketTypeIndicesController');
+Route::model('casket_types_index', 'CasketTypeIndex');

@@ -19,6 +19,7 @@ class Casket extends \Eloquent {
 		'material',
 		'manufacturer',
 		'casket_group',
+		'sort_group',
 		'price',
 		'cost',
 		'size',
@@ -33,4 +34,24 @@ class Casket extends \Eloquent {
 
 
 	protected $table = 'caskets';
+
+
+	static function sortGroups($sort){
+
+		return Casket::where('sort_group', $sort)->get();
+	}
+
+
+	public function GetNext($sort){
+
+		return Casket::where('sort_group', $sort)->where('id', '>', $this->id)->pluck('id');
+	}
+
+	public function GetPrev($sort){
+
+		return Casket::where('sort_group', $sort)->where('id', '<', $this->id)->orderBy('id', 'desc')->pluck('id');
+	}
+
+
+
 }

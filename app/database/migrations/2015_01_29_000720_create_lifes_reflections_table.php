@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateVaultsTable extends Migration {
+class CreateLifesReflectionsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,16 +12,12 @@ class CreateVaultsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('vaults', function(Blueprint $table)
+		Schema::create('lifes_reflections', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->string('liner');
-			$table->text('description');
-			$table->string('price');
 			$table->string('image_1');
 			$table->string('image_2');
-			$table->string('image_3');
 			$table->timestamps();
 		});
 	}
@@ -34,7 +30,7 @@ class CreateVaultsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('vaults');
+		Schema::drop('lifes_reflections');
 	}
 
 }

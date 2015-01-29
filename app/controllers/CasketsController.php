@@ -7,11 +7,11 @@ class CasketsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($type)
 	{
-		$caskets = Casket::all();
+		$casket = Casket::sortGroups($type);
 
-		return View::make('caskets.index', compact('caskets'));
+		return View::make('caskets.index', compact('casket'));
 	}
 
 	/**

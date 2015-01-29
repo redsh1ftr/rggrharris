@@ -15,6 +15,10 @@ class CreateFlowersTable extends Migration {
 		Schema::create('flowers', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('name');
+			$table->string('price');
+			$table->string('image_1');
+			$table->string('image_2');
 			$table->timestamps();
 		});
 	}
