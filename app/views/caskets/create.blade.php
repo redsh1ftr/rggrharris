@@ -1,86 +1,69 @@
-@extends('layouts.master')
+
+		{{Form::open(array('route' => 'caskets.store', 'method' => 'post'))}}
+
+
+'product_id',
+		'name',
+		'type',
+		'subtype',
+		'casket_number',
+		'shell',
+		'interior',
+		'material',
+		'manufacturer',
+		'casket_group',
+		'sort_group',
+		'price',
+		'cost',
+		'size',
+		'notes',
+		'panel',
+		'vault_size',
+		'interior_dimensions',
+		'image_1',
+		'image_2',
+		'image_3',
 
 
 
 
-@section('title')
-
-@stop
-
-
-
-
-
-@section('right-menu')
-
-@stop
-
-
-
-
-
-@section('style')
-	
-	<style>
-
-		.rightList{
-			position: absolute;
-			height: 30%;
-			width: 20%;
-			margin-left: 80%;
-			margin-top: 10%;
-		}
-	</style>
-
-@stop
-
-
-
-
-
-@section('content')
-
-
-
-<div class="background">
-	<center>
-
-
-			<div class="rightList">
-				<ul class="tabs vertical" data-tab>
-				  <li><a href="#panel11">Tab 1</a></li>
-				  <li><a href="#panel21">Tab 2</a></li>
-				  <li><a href="#panel31">Tab 3</a></li>
-				  <li><a href="#panel41">Tab 4</a></li>
-				</ul>
-
+		<div class="row">
+			<div class="large-6 columns">
+				{{Form::text('name', '', array('placeholder' => 'Name', 'style' => ''))}}
 			</div>
 
+			<div class="large-6 columns">
+				{{Form::text('casket_number', '', array('placeholder' => 'Casket Number', 'style' => ''))}}
+			</div>
+
+			<div class="large-6 columns">
+				{{Form::text('shell', '', array('placeholder' => 'Shell', 'style' => ''))}}
+			</div>
+		</div>
 
 
+		<div class="row">
+			<div class="large-12 columns">
+				{{Form::text('', '', array('placeholder' => '', 'style' => ''))}}
+				{{Form::text('', '', array('placeholder' => '', 'style' => ''))}}
+				{{Form::text('', '', array('placeholder' => '', 'style' => ''))}}
+			</div>
+		</div>
 
-<div class="tabs-content">
-  <div class="content active" id="panel11">
-    <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
-  </div>
-  <div class="content" id="panel21">
-    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel31">
-    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel41">
-    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
-  </div>
-</div>
+		<div class="row">
+			<div class="large-12 columns">
 
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="large-12 columns">
 
-
-
-	</center>
-</div>
+			</div>
+		</div>
 
 
+		{{Form::submit('')}}
 
+		{{Form::close()}}
 
-@stop
