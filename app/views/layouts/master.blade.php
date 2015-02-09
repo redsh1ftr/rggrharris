@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RGGR Harris</title>
-   <link href="http://www.eternallynocturnal.com/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-   <link rel="stylesheet" href="http://www.eternallynocturnal.com/foundation/css/foundation.css">
-   <link rel="stylesheet" href="http://www.eternallynocturnal.com/foundation/css/normalize.css">
+  <title>RG&GR Harris</title>
+   <link rel="stylesheet" href="//localhost/rggrharris/public/foundation/css/foundation.css">
+   <link rel="stylesheet" href="//localhost/rggrharris/public/foundation/css/normalize.css">
+   <link rel="stylesheet" href="//localhost/rggrharris/public/foundation/foundation-icons/foundation-icons.css" />
 
- <script src="http://www.eternallynocturnal.com/foundation/js/vendor/modernizr.js"></script>
+ <script src="//localhost/rggrharris/public/foundation/js/vendor/modernizr.js"></script>
 
 
 <style>
@@ -69,16 +69,8 @@
 
 
 
-
-
-
-
-
-
-   <script src="http://www.eternallynocturnal.com/bootstrap/js/bootstrap.min.js"></script>
-
-  <script src="http://www.eternallynocturnal.com/foundation/js/vendor/jquery.js"></script>
-  <script src="http://www.eternallynocturnal.com/foundation/js/foundation.min.js"></script>
+  <script src="//localhost/rggrharris/public/foundation/js/vendor/jquery.js"></script>
+  <script src="//localhost/rggrharris/public/foundation/js/foundation.min.js"></script>
 
   <script>
     $(document).foundation();

@@ -94,12 +94,52 @@
 
 
 <div id="image1{{$cas->id}}" class="reveal-modal" data-reveal>
-  <img style="height:600px;" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}">
-   <a class="close-reveal-modal">&#215;</a>
+
+	<?php $image = Casket::where('id', $cas->id)->pluck('id');?>
+
+
+
+  <img style="height:600px;" id="interiorImage_{{$cas->id}}" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}" onclick="changeImage({{$image}})"  />
+
+
+	<script language="javascript">
+	    function $image() {
+
+	        if (document.getElementById("interiorImage_{{$cas->id}}").src == "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}") 
+	        {
+	            document.getElementById("interiorImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}";
+	        }
+	        else 
+	        {
+	            document.getElementById("interiorImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}";
+	        }
+	    }
+	</script>
+
+
+  <a class="close-reveal-modal">&#215;</a>
 </div>
 
 <div id="image2{{$cas->id}}" class="reveal-modal" data-reveal>
-  <img style="height:600px;" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}">
+
+<img style="height:600px;" id="hardwareImage_{{$cas->id}}" onclick="changeImage()" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}" onclick="changeImage()"  />
+
+	<script language="javascript">
+	    function changeImage() {
+
+	        if (document.getElementById("hardwareImage_{{$cas->id}}").src == "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}") 
+	        {
+	            document.getElementById("hardwareImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}";
+	        }
+	        else 
+	        {
+	            document.getElementById("hardwareImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}";
+	        }
+	    }
+	</script>
+
+
+  
    <a class="close-reveal-modal">&#215;</a>
 </div>
 
@@ -120,8 +160,10 @@
 		
 			<div class="navi">
 					<ul class="tabs" data-tab>
-					  <li class="tab-title"><a style="background-color:transparent" href="#panel_{{$cas->GetPrev($cas->sort_group)}}"><span class="icon-arrow-left"></span></a></li>
-					  <li class="tab-title"><a style="background-color:transparent" href="#panel_{{$cas->GetNext($cas->sort_group)}}"><span class="icon-arrow-right"></span></a></li>
+					  <li class="tab-title"><a style="background-color:transparent" href="#panel_{{$cas->GetPrev($cas->sort_group)}}">
+					  	<i class="fi-arrow-left" style="color:#ffffff;font-size:30px;"></i></a></li>
+					  <li class="tab-title"><a style="background-color:transparent" href="#panel_{{$cas->GetNext($cas->sort_group)}}">
+					  	<i class="fi-arrow-right" style="color:#ffffff;font-size:30px;"></i></a></li>
 					</ul>
 				
 		

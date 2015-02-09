@@ -13,7 +13,7 @@
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
-<div id="newCasket" class="reveal-modal" style="max-height:650px;max-width:700px;background-color:transparent;overflow-y:scroll;" data-reveal>
+<div id="newCasket" class="reveal-modal" style="max-height:550px;max-width:700px;background-color:transparent;overflow-y:scroll;" data-reveal>
   {{View::make('caskets.create')}}
   <a class="close-reveal-modal">&#215;</a>
 </div>

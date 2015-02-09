@@ -19,7 +19,9 @@
 			</div>
 
 			<div class="large-6 columns">
-				<a href="#" data-reveal-id="newType" style="color:#ffffff;font-size:20px;">Add New Casket Type</a>
+				<a href="#" data-reveal-id="newType" style="color:#ffffff;font-size:20px;">
+					<i class="fi-plus" style="font-size:30px;color:#ffffff;"></i>
+						Add New Casket Type</a>
 			</div>
 		</div>
 
@@ -87,44 +89,31 @@
 			</div>
 
 			<div class="large-6 columns">
-				{{Form::file('image_1')}}
-				{{Form::file('image_2')}}
-				{{Form::file('image_3')}}
+			<label style="color:#ffffff"><i class="fi-camera" style="font-size:20px;color:#ffffff"></i> Main Image</label>	
+				{{Form::file('image_1', array('style' => 'color:#ffffff'))}}
+			</div>
+			
+			<div class="large-6 columns">
+			<label style="color:#ffffff"><i class="fi-camera" style="font-size:20px;color:#ffffff"></i> Interior Image</label>
+				{{Form::file('image_2', array('style' => 'color:#ffffff'))}}
 			</div>
 
+			<div class="large-6 columns">
+			<label style="color:#ffffff"><i class="fi-camera" style="font-size:20px;color:#ffffff"></i> Hardware Image</label>	
+				{{Form::file('image_3', array('style' => 'color:#ffffff'))}}
+			</div>
 
-
-
-		'image_1',
-		'image_2',
-		'image_3',
-
-			casket_group
-		</div>
-
-
-		<div class="row">
 			<div class="large-12 columns">
-				{{Form::text('', '', array('placeholder' => '', 'style' => ''))}}
-				{{Form::text('', '', array('placeholder' => '', 'style' => ''))}}
-				{{Form::text('', '', array('placeholder' => '', 'style' => ''))}}
+				<center>
+					<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;">Create New Casket</button>
+				</center>
 			</div>
-		</div>
 
-		<div class="row">
-			<div class="large-12 columns">
-
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="large-12 columns">
-
-			</div>
 		</div>
 
 
-		{{Form::submit('')}}
+	
+
 
 		{{Form::close()}}
 
