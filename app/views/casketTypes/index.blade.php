@@ -1,1 +1,5 @@
-C:\xampp\htdocs\rggrharris\app/views/casketTypes/index.blade.php
+@foreach(CasketType::get() as $casketTypes)
+
+	<li>{{link_to_route('casketIndex', $casketTypes->name, $casketTypes->name)}}</li>
+
+@endforeach

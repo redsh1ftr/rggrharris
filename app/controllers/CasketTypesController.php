@@ -40,7 +40,7 @@ class CasketTypesController extends \BaseController {
 
 		Caskettype::create($data);
 
-		return Redirect::route('caskettypes.index');
+		return Redirect::back();
 	}
 
 	/**

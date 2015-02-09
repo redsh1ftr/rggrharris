@@ -45,7 +45,9 @@
 
     <aside class="left-off-canvas-menu" style="background-color:#546544">
       <ul class="off-canvas-list">
-<li>Test</li>
+        <li><label>Caskets</label></li>
+        <li>Test</li>
+        {{View::make('caskettypes.index')}}
 
 
 
@@ -56,6 +58,7 @@
         <aside class="right-off-canvas-menu" style="background-color:#546544">
       <ul class="off-canvas-list">
         <li><label style="background-color:#546544; color:#ffffff">Actions</label></li>
+        {{View::make('layouts.adminmenu')}}
         @yield('right-menu')
 </ul>
     </aside>
