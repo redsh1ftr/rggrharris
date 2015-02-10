@@ -1,5 +1,18 @@
+ <ul class="off-canvas-list">
+        <li><label>Caskets</label></li>
+
+
+
 @foreach(CasketType::get() as $casketTypes)
 
-	<li>{{link_to_route('casketIndex', $casketTypes->name, $casketTypes->name)}}</li>
+	<li class="has-submenu">{{link_to_route('casketIndex', $casketTypes->name, $casketTypes->name)}}
+		<ul class="left-submenu">
+			<li class="back"><a href="#">Back</a></li>
+			@foreach(CasketSubType::where('type_id', $casketTypes->id)->get() as $subt)
 
+				<li style="color:#ffffff">{{$subt->name}}</li>
+
+			@endforeach
+		</ul>
+</li>
 @endforeach

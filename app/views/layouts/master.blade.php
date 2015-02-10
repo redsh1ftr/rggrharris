@@ -44,8 +44,7 @@
     </nav>
 
     <aside class="left-off-canvas-menu" style="background-color:#546544">
-      <ul class="off-canvas-list">
-        <li><label>Caskets</label></li>
+     
        
         {{View::make('caskettypes.index')}}
 
