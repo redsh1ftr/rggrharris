@@ -9,7 +9,7 @@ class AdminsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$admins = Admin::all();
+		$admins = Casket::all();
 
 		return View::make('admins.index', compact('admins'));
 	}

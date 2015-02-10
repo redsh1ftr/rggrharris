@@ -1,8 +1,10 @@
-
+<?php $casid = 1;?>
 
 {{-- List Items --}}
 <li><a href="#" data-reveal-id="newCasket">New Casket</a></li>
 <li><a href="#" data-reveal-id="newType">New Casket Type</a></li>
+<li><a href="#" data-reveal-id="editCaskets">Edit Caskets</a></li>
+
 {{-- End List Items --}}
 
 
@@ -17,5 +19,12 @@
   {{View::make('caskets.create')}}
   <a class="close-reveal-modal">&#215;</a>
 </div>
+
+
+<div id="editCaskets" class="reveal-modal" style="max-height:550px;max-width:700px;background-color:transparent;overflow-y:scroll;" data-reveal>
+  {{View::make('caskets.editlist')}}
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
 
 {{-- End Modal Code --}}

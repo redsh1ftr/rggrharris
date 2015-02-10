@@ -102,19 +102,6 @@
   <img style="height:600px;" id="interiorImage_{{$cas->id}}" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}" onclick="changeImage({{$image}})"  />
 
 
-	<script language="javascript">
-	    function $image() {
-
-	        if (document.getElementById("interiorImage_{{$cas->id}}").src == "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}") 
-	        {
-	            document.getElementById("interiorImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}";
-	        }
-	        else 
-	        {
-	            document.getElementById("interiorImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}";
-	        }
-	    }
-	</script>
 
 
   <a class="close-reveal-modal">&#215;</a>
@@ -124,19 +111,6 @@
 
 <img style="height:600px;" id="hardwareImage_{{$cas->id}}" onclick="changeImage()" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}" onclick="changeImage()"  />
 
-	<script language="javascript">
-	    function changeImage() {
-
-	        if (document.getElementById("hardwareImage_{{$cas->id}}").src == "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}") 
-	        {
-	            document.getElementById("hardwareImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}";
-	        }
-	        else 
-	        {
-	            document.getElementById("hardwareImage_{{$cas->id}}").src = "http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}";
-	        }
-	    }
-	</script>
 
 
   
