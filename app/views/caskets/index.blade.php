@@ -128,7 +128,7 @@
 
 
 			<div class="row">
-					DATA
+					{{$cas->name}} {{$cas->shell}} {{$cas->interior}}
 			</div>
 
 		

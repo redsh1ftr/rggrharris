@@ -105,7 +105,7 @@
 
 			<div class="large-12 columns">
 				<center>
-					<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;">Create New Casket</button>
+					<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;border:1px solid;">Create New Casket</button>
 				</center>
 			</div>
 

@@ -8,6 +8,7 @@ class CasketTypeIndex extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = ['casket_id', 'subtype_id'];
 
+	protected $table = 'caskettypeindices';
 }

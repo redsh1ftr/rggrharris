@@ -31,7 +31,7 @@ class CasketTypeIndicesController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Caskettypeindex::$rules);
+		$validator = Validator::make($data = Input::except('_token'), Caskettypeindex::$rules);
 
 		if ($validator->fails())
 		{
@@ -40,7 +40,7 @@ class CasketTypeIndicesController extends \BaseController {
 
 		Caskettypeindex::create($data);
 
-		return Redirect::route('caskettypeindices.index');
+		return Redirect::back();
 	}
 
 	/**

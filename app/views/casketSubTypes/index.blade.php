@@ -3,7 +3,7 @@
 <a href="#" data-reveal-id="newSubType_{{$casket->id}}" style="color:#ffffff">Add Subtype to {{$casket->name}}</a><br>
 
 
-<div id="newSubType_{{$casket->id}}" class="reveal-modal" style="max-height:500px;max-width:700px;background-color:transparent" data-reveal>
+<div id="newSubType_{{$casket->id}}" class="reveal-modal" style="max-height:500px;max-width:700px;overflow-y:scroll;background-color:transparent" data-reveal>
 
 <div style="color:#ffffff">Current Subtypes for {{$casket->name}} (click to edit):<br>
 
@@ -44,7 +44,7 @@
 {{Form::text('name')}}
 <div class="large-12 columns">
 				<center>
-					<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;">Create New Subtype</button>
+					<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;border:2px solid;">Create New Subtype</button>
 				</center>
 			</div>
 
