@@ -40,7 +40,7 @@ class CasketSubTypesController extends \BaseController {
 
 		Casketsubtype::create($data);
 
-		return Redirect::route('casketsubtypes.index');
+		return Redirect::back();
 	}
 
 	/**
@@ -88,7 +88,7 @@ class CasketSubTypesController extends \BaseController {
 
 		$casketsubtype->update($data);
 
-		return Redirect::route('casketsubtypes.index');
+		return Redirect::back();
 	}
 
 	/**

@@ -8,6 +8,8 @@ class CasketSubType extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = ['type_id', 'name'];
+
+	protected $table = 'casketsubtypes';
 
 }

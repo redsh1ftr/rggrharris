@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="small-6 columns">
-			<label>Shell</label>
+			<label style="color:#ffffff">Shell</label>
 			{{Form::text('shell')}}
 		</div>
 	</div>

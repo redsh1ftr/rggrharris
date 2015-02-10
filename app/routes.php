@@ -42,7 +42,7 @@ Route::resource('caskettypes', 'CasketTypesController');
 Route::model('casket_types', 'CasketType');
 
 Route::resource('casketsubtypes', 'CasketSubTypesController');
-Route::model('casket_subtypes', 'CasketSubType');
+Route::model('casketsubtype', 'CasketSubType');
 
 Route::resource('caskettypesindex', 'CasketTypeIndicesController');
 Route::model('casket_types_index', 'CasketTypeIndex');
