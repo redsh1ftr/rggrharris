@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RG&GR Harris</title>
-   <link rel="stylesheet" href="//localhost/rggrharris/public/foundation/css/foundation.css">
-   <link rel="stylesheet" href="//localhost/rggrharris/public/foundation/css/normalize.css">
-   <link rel="stylesheet" href="//localhost/rggrharris/public/foundation/foundation-icons/foundation-icons.css" />
+   <link rel="stylesheet" href="//http://54.149.206.42/rggrharris/public/foundation/css/foundation.css">
+   <link rel="stylesheet" href="//http://54.149.206.42/rggrharris/public/foundation/css/normalize.css">
+   <link rel="stylesheet" href="//http://54.149.206.42/rggrharris/public/foundation/foundation-icons/foundation-icons.css" />
 
- <script src="//localhost/rggrharris/public/foundation/js/vendor/modernizr.js"></script>
+ <script src="//http://54.149.206.42/rggrharris/public/foundation/js/vendor/modernizr.js"></script>
 
 
 <style>
@@ -69,8 +69,8 @@
 
 
 
-  <script src="//localhost/rggrharris/public/foundation/js/vendor/jquery.js"></script>
-  <script src="//localhost/rggrharris/public/foundation/js/foundation.min.js"></script>
+  <script src="//http://54.149.206.42/rggrharris/public/foundation/js/vendor/jquery.js"></script>
+  <script src="//http://54.149.206.42/rggrharris/public/foundation/js/foundation.min.js"></script>
 
   <script>
     $(document).foundation();
