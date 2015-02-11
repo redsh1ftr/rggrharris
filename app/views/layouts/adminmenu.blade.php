@@ -6,7 +6,10 @@
 				<li><a href="#" data-reveal-id="newCasket">New Casket</a></li>
 				<li><a href="#" data-reveal-id="editCaskets">Edit Caskets</a></li>
 				<li><a href="#" data-reveal-id="newType">New Casket Type</a></li>
-				<li><a href="#" data-reveal-id="newSubType">New Casket Sub-Type</a></li>
+				<li><a href="#" data-reveal-id="newSubType">Casket Sub-Types</a></li>
+    
+
+
 	</ul>
 </li>
 {{-- End List Items --}}
@@ -34,5 +37,7 @@
   {{View::make('casketSubTypes.index')}}
   <a class="close-reveal-modal">&#215;</a>
 </div>
+
+
 
 {{-- End Modal Code --}}
