@@ -3,7 +3,7 @@
 class CasketTypeIndex extends \Eloquent {
 
 	// Add your validation rules here
-	public static $rules = [
+	public static $rules = [ 
 		// 'title' => 'required'
 	];
 

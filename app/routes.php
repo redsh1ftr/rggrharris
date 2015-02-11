@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return Redirect::route('casketIndex', 'all');
 });
 
 Route::resource('central', 'CentralsController');

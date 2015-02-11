@@ -9,9 +9,13 @@ class CasketsController extends \BaseController {
 	 */
 	public function index($type)
 	{
-		$casket = Casket::sortGroups($type);
+		if($type == 'all'){
+			$casket = Casket::all();
+		}else{
+			$casket = Casket::sortGroups($type);
+		}
 
-		return View::make('caskets.index', compact('casket'));
+		return View::make('caskets.index', compact('casket', $type));
 	}
 
 	/**
@@ -40,7 +44,7 @@ class CasketsController extends \BaseController {
 
 		Casket::create($data);
 
-		return Redirect::route('caskets.index');
+		return Redirect::route('casketIndex', 'all');
 	}
 
 	/**

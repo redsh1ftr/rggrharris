@@ -31,14 +31,21 @@ class CasketTypeIndicesController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::except('_token'), Caskettypeindex::$rules);
+		$caskets = Input::get('casket_id');
 
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
+		foreach ($caskets as $cid) {
+
+			if(CasketTypeIndex::where('subtype_id', Input::get('subtype_id'))->where('casket_id', $cid)->first()){
+
+				DB::table('caskettypeindices')->where('subtype_id', 'subtype_id')->where('casket_id', $cid)->update(array('casket_id' => $cid, 'subtype_id' => Input::get('subtype_id')));
+			}else{
+				
+				DB::table('caskettypeindices')->insert(array('casket_id' => $cid, 'subtype_id' => Input::get('subtype_id')));
+
+			}
+			
 		}
-
-		Caskettypeindex::create($data);
+		
 
 		return Redirect::back();
 	}
