@@ -12,7 +12,7 @@
 	@foreach(CasketSubType::where('type_id', $casket->id)->get() as $current)
 		{{$count++}}. <a href="#" data-reveal-id="editSubType_{{$current->id}}" style="color:#ffffff">{{$current->name}}</a><br>
 
-			<div id="editSubType_{{$current->id}}" class="reveal-modal" style="max-height:500px;max-width:700px;background-color:transparent" data-reveal>
+			<div id="editSubType_{{$current->id}}" class="reveal-modal" style="max-height:500px;max-width:700px;background-color:transparent;overflow-y:scroll;" data-reveal>
 
 		
 
@@ -25,11 +25,37 @@
 
 				<div class="large-12 columns">
 					<center>
-						<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;">Update {{$current->name}}</button>
+						<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;">Update {{$current->name}}'s name</button>
 					</center>
 				</div>
 
 				{{Form::close()}}
+
+
+				{{Form::open(array('route' => 'caskettypesindex.store', 'method' => 'post'))}}
+	
+					{{Form::hidden('subtype_id', $current->name)}}
+			
+				<table style="align:center"><th>Check to Add<th>&nbsp<th>Check to Remove<tr>
+					@foreach(Casket::all() as $caskets)
+					
+						<?php $checkindex = CasketTypeIndex::where('subtype_id', $current->name)->where('casket_id', $caskets->id)->pluck('casket_id');?>
+
+						<td>{{Form::checkbox("casket_id[$caskets->id]", $caskets->id, $checkindex)}}
+						<td>{{$caskets->name}}
+						<td>{{Form::checkbox("removecasket_id[$caskets->id]", $caskets->id, '')}}
+							<tr>
+						
+					@endforeach
+				</table>
+
+				{{Form::submit('sub')}}
+
+				{{Form::close()}}
+
+
+
+
 			 <a class="close-reveal-modal">&#215;</a>
 			</div>
 

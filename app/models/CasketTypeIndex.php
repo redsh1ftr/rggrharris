@@ -11,4 +11,15 @@ class CasketTypeIndex extends \Eloquent {
 	protected $fillable = ['casket_id', 'subtype_id'];
 
 	protected $table = 'caskettypeindices';
+
+
+	public function GetNext($sort){
+
+		return CasketTypeIndex::where('subtype_id', $sort)->where('id', '>', $this->id)->pluck('id');
+	}
+
+	public function GetPrev($sort){
+
+		return CasketTypeIndex::where('subtype_id', $sort)->where('id', '<', $this->id)->orderBy('id', 'desc')->pluck('id');
+	}
 }

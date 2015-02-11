@@ -57,17 +57,20 @@
 
 @section('content')
 
+
+
+
 <div class="background">
 	<center>
 
 
 			<div class="rightList">
 				<ul class="tabs" data-tab>
-				  
-				  	@foreach($casket as $cas)
+				  @foreach($findcasket as $casket)
+				  	@foreach(Casket::where('id', $casket)->get() as $cas)
 				  <li style="width:180px"><a href="#panel_{{$cas->id}}" style="background:transparent" class="button tiny round">{{$cas->name}}</a></li>
 				  	@endforeach
-				  
+				  @endforeach
 				</ul>
 
 			</div>
@@ -76,8 +79,8 @@
 
 
 <div class="tabs-content">
-
-	@foreach($casket as $cas)
+@foreach($findcasket as $casket)
+	@foreach(Casket::where('id', $casket)->get() as $cas)
 
 
 			  <div class="content" id="panel_{{$cas->id}}">
@@ -94,7 +97,7 @@
 
 <div id="image1{{$cas->id}}" class="reveal-modal" data-reveal>
 
-	<?php $image = Casket::where('id', $cas->id)->pluck('id');?>
+	<?php $image = $cas->id;?>
 
 
 
@@ -148,7 +151,7 @@
 
 
 			
-
+		@endforeach
 
 	@endforeach
 </div>

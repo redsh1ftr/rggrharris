@@ -21,6 +21,7 @@ Route::model('central', 'Central');
 
 Route::resource('caskets', 'CasketsController');
 Route::get('/allcasket/{type}', array('as' => 'casketIndex', 'uses' => 'CasketsController@index'));
+Route::get('/somecasket/{type}', array('as' => 'casketSubTypeIndex', 'uses' => 'CasketsController@indexSubtype'));
 Route::model('casket', 'Casket');
 
 Route::resource('vaults', 'VaultsController');
