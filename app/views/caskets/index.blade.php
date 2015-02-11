@@ -13,6 +13,7 @@
 
 @section('right-menu')
 
+<li>NEW ACTION</li>
 
 @stop
 

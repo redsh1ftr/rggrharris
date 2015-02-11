@@ -18,15 +18,6 @@ class CasketsController extends \BaseController {
 		return View::make('caskets.index', compact('casket', $type));
 	}
 
-	public function indexSubtype($type)
-	{
-
-			$findcasket = CasketTypeIndex::where('subtype_id', $type)->lists('casket_id');
-
-
-		return View::make('caskets.someindex', compact('findcasket', $type));
-	}
-
 	/**
 	 * Show the form for creating a new casket
 	 *

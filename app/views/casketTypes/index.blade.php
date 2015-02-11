@@ -12,7 +12,7 @@
 
 			@foreach(CasketSubType::where('type_id', $casketTypes->id)->get() as $subt)
 
-				<li style="color:#ffffff">{{link_to_route('casketSubTypeIndex', $subt->name, $subt->name)}}</li>
+				<li style="color:#ffffff">{{$subt->name}}</li>
 
 			@endforeach
 		</ul>

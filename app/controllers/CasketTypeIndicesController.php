@@ -31,11 +31,9 @@ class CasketTypeIndicesController extends \BaseController {
 	 */
 	public function store()
 	{
-		$removecaskets = Input::get('removecasket_id');
 		$caskets = Input::get('casket_id');
 
 		foreach ($caskets as $cid) {
-
 
 			if(CasketTypeIndex::where('subtype_id', Input::get('subtype_id'))->where('casket_id', $cid)->first()){
 
@@ -44,12 +42,9 @@ class CasketTypeIndicesController extends \BaseController {
 				
 				DB::table('caskettypeindices')->insert(array('casket_id' => $cid, 'subtype_id' => Input::get('subtype_id')));
 
-			}}
-
-		if($removecaskets){
-		foreach($removecaskets as $remove){
-			$delete = DB::table('caskettypeindices')->where('casket_id', $remove)->delete();
-		}}
+			}
+			
+		}
 		
 
 		return Redirect::back();
