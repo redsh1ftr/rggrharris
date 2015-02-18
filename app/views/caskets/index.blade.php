@@ -85,9 +85,9 @@
 			  	<div class="thumbnails">
 
 					<a href="#" data-reveal-id="image1{{$cas->id}}">
-						<img style="max-height:100px;max-width:100px;overflow:hidden;" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}"></a>
+						<img style="max-height:100px;max-width:100px;overflow:hidden;" src="//localhost/rggrharris/public/images/caskets/{{$cas->image_2}}"></a>
 					<a href="#" data-reveal-id="image2{{$cas->id}}">
-						<img style="max-height:100px;max-width:100px;overflow:hidden;" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}"></a>
+						<img style="max-height:100px;max-width:100px;overflow:hidden;" src="//localhost/rggrharris/public/images/caskets/{{$cas->image_3}}"></a>
 				
 				</div>
 
@@ -98,7 +98,7 @@
 
 
 
-  <img style="height:600px;" id="interiorImage_{{$cas->id}}" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_2}}" onclick="changeImage({{$image}})"  />
+  <img style="height:600px;" id="interiorImage_{{$cas->id}}" src="//localhost/rggrharris/public/images/caskets/{{$cas->image_2}}" onclick="changeImage({{$image}})"  />
 
 
 
@@ -108,7 +108,7 @@
 
 <div id="image2{{$cas->id}}" class="reveal-modal" data-reveal>
 
-<img style="height:600px;" id="hardwareImage_{{$cas->id}}" onclick="changeImage()" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_3}}" onclick="changeImage()"  />
+<img style="height:600px;" id="hardwareImage_{{$cas->id}}" onclick="changeImage()" src="//localhost/rggrharris/public/images/caskets/{{$cas->image_3}}" onclick="changeImage()"  />
 
 
 
@@ -118,16 +118,34 @@
 
 
 			  	<div class="row">
-					<img style="height:600px;" src="http://www.tavaresoft.com/harris/web/public/images/{{$cas->image_1}}">
-				</div>
-
-				<div class="row">
-					{{$cas->name}}
+					<img style="height:600px;" src="//localhost/rggrharris/public/images/caskets/{{$cas->image_1}}">
 				</div>
 
 
 			<div class="row">
-					{{$cas->name}} {{$cas->shell}} {{$cas->interior}}
+				<div class="small-2 columns">
+					{{$cas->material}}
+				</div>
+
+				<div class="small-1 columns">
+					{{$cas->shell}} 
+				</div>
+
+				<div class="small-3 columns">
+					{{$cas->name}} 
+				</div>
+				
+				<div class="small-3 columns">
+					{{$cas->interior}}
+				</div>
+
+				<div class="small-2 columns">
+					{{$cas->manufacturer}}
+				</div>
+
+				<div class="small-1 columns">
+					{{$cas->price}}
+				</div>
 			</div>
 
 		

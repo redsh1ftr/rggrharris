@@ -9,6 +9,16 @@
 
 	<div class="row">
 		<div class="small-6 columns">
+			<label style="color:#ffffff">Type</label>
+			<select>
+				<option value="{{$casket->sort_group}}" selected>{{$casket->sort_group}}</option>
+				@foreach(CasketType::get() as $casketTypes)
+						<option value="{{$casketTypes->name}}">{{$casketTypes->name}}</option>
+				@endforeach
+			</selecT>
+		</div>
+
+		<div class="small-6 columns">
 			<label style="color:#ffffff">Name</label>
 			{{Form::text('name')}}
 		</div>

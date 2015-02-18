@@ -1,9 +1,9 @@
-<?php $type = 'candy';?>
+
 {{Form::open(array('route' => 'caskettypesindex.store', 'method' => 'post'))}}
 	
 	{{Form::hidden('subtype_id', $type)}}
 
-	@foreach(Casket::all() as $caskets)
+	@foreach(Casket::where('sort_group', $type)->get() as $caskets)
 	
 		<?php $checkindex = CasketTypeIndex::where('subtype_id', $type)->where('casket_id', $caskets->id)->pluck('id');?>
 

@@ -1,5 +1,5 @@
 
-		{{Form::open(array('route' => 'caskets.store', 'method' => 'post'))}}
+		{{Form::open(array('route' => 'caskets.store', 'method' => 'post', 'files' => 'true'))}}
 
 
 

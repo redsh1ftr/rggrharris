@@ -31,13 +31,12 @@
 
 				{{Form::close()}}
 
-
 				{{Form::open(array('route' => 'caskettypesindex.store', 'method' => 'post'))}}
 	
 					{{Form::hidden('subtype_id', $current->name)}}
 			
 				<table style="align:center"><th>Check to Add<th>&nbsp<th>Check to Remove<tr>
-					@foreach(Casket::all() as $caskets)
+					@foreach(Casket::where('sort_group', $casket->name)->get() as $caskets)
 					
 						<?php $checkindex = CasketTypeIndex::where('subtype_id', $current->name)->where('casket_id', $caskets->id)->pluck('casket_id');?>
 

@@ -125,6 +125,7 @@ return array(
 		'Scalia\SphinxSearch\SphinxSearchServiceProvider',
 		'Barryvdh\DomPDF\ServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 
 
 	),
@@ -196,6 +197,7 @@ return array(
 		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 		'SphinxSearch' => 'Scalia\SphinxSearch\SphinxSearchFacade',
 		'PDF' => 'Barryvdh\DomPDF\Facade',
+		'Image' => 'Intervention\Image\Facades\Image'
 
 	),
 
