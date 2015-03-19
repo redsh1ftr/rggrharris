@@ -5,7 +5,7 @@
 
 <div id="editCasket_{{$casket->id}}" class="reveal-modal" style="overflow-y:scroll;max-height:500px;max-width:700px;background-color:transparent" data-reveal>
  
-{{Form::model($casket, array('method' => 'put', 'files' => 'truee', 'route' => array('caskets.update', $casket->id)))}}
+{{Form::model($casket, array('method' => 'put', 'files' => 'true', 'route' => array('caskets.update', $casket->id)))}}
 
 	<div class="row">
 		<div class="small-6 columns">
@@ -113,15 +113,6 @@
 				<button type="submit" style="font-size:30px;color:#ffffff;background:transparent;border:2px solid;">Update {{$casket->name}}</button>
 			</center>
 		</div>
-
-
-
-
-
-
-
-
-
 
 
 

@@ -16,6 +16,11 @@ Route::get('/', function()
 	return Redirect::route('casketIndex', 'all');
 });
 
+Route::get('/tesst/2', function()
+{
+	return View::make('vaults.editlistr');
+});
+
 Route::resource('central', 'CentralsController');
 Route::model('central', 'Central');
 

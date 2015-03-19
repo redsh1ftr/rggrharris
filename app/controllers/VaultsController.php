@@ -31,14 +31,55 @@ class VaultsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Vault::$rules);
+
+		if(Input::file('image_1'))
+		{
+		$image_1 = Input::file('image_1');
+	    $filename_1  = Input::get('name') . '_' . Str::random(5) . '_1.' . $image_1->getClientOriginalExtension();
+	    $newimg_1 = Image::make($image_1)->resize(null, 600, function ($constraint) {$constraint->aspectRatio();})->save(public_path().'/images/caskets/'.$filename_1);
+	    $newthumb_1 = Image::make($image_1)->resize(null, 150, function ($constraint) {$constraint->aspectRatio();})->save(public_path().'/thumbs/caskets/'.$filename_1);
+		}else{
+			$filename_1 = 'placeholder.jpg';
+		}
+
+		if(Input::file('image_2'))
+		{
+		$image_2 = Input::file('image_2');
+	    $filename_2  = Input::get('name') . '_' . Str::random(5) . '_2.' . $image_2->getClientOriginalExtension();
+	    $newimg_2 = Image::make($image_2)->resize(null, 600, function ($constraint) {$constraint->aspectRatio();})->save(public_path().'/images/caskets/'.$filename_2);
+	    $newthumb_2 = Image::make($image_2)->resize(null, 150, function ($constraint) {$constraint->aspectRatio();})->save(public_path().'/thumbs/caskets/'.$filename_2);
+		}else{
+			$filename_2 = 'placeholder.jpg';
+		}
+
+		if(Input::file('image_3'))
+		{
+		$image_3 = Input::file('image_3');
+	    $filename_3  = Input::get('name') . '_' . Str::random(5) . '_3.' . $image_3->getClientOriginalExtension();
+	    $newimg_3 = Image::make($image_3)->resize(null, 600, function ($constraint) {$constraint->aspectRatio();})->save(public_path().'/images/caskets/'.$filename_3);
+	    $newthumb_3 = Image::make($image_3)->resize(null, 150, function ($constraint) {$constraint->aspectRatio();})->save(public_path().'/thumbs/caskets/'.$filename_3);
+		}else{
+			$filename_3 = 'placeholder.jpg';
+		}
+
+		$validator = Validator::make($data = Input::except('_token', 'image_1', 'image_2', 'image_3'), Casket::$rules);
 
 		if ($validator->fails())
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Vault::create($data);
+		Vault::create(array(
+			'name' => Input::get('name'),
+			'liner' => Input::get('liner'),
+			'description' => Input::get('description'),
+			'price' => Input::get('price'),
+			'image_1' => $filename_1,
+			'image_2' => $filename_2,
+			'image_3' => $filename_3,
+
+			));	
+
 
 		return Redirect::route('vaults.index');
 	}
